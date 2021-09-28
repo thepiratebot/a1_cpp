@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <cctype>
+#include <cmath>
 
 
 /* MANIPULATION DE NOMBRES */
@@ -171,7 +172,6 @@ int main() {
 
     /* MANIPULATION DE NOMBRES */
 
-    /*
     int x;
     std::string ordre;
 
@@ -182,20 +182,17 @@ int main() {
         Tableau(x, true);
     else
         Tableau(x, false);
-    */
 
     /* JEU DU TENNIS */
 
-    /*
     int a, b;
 
     std::cout << std::endl << "Points marqué par le Joueur A : "; std::cin >> a;
     std::cout << std::endl << "Points marqué par le Joueur B : "; std::cin >> b;
 
     Score(a,b);
-    */
 
-    /* III */
+    /* Plus grand plus petit */
 
     std::string prenom, nom;
 
@@ -230,9 +227,6 @@ int main() {
         count++;
     }
 
-
     return 0;
-
-
 
 }
