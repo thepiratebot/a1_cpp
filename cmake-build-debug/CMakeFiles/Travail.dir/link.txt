@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/Travail.dir/main.cpp.o -o Travail 

@@ -1,3 +1,0 @@
-/home/devops/Bureau/CNAM/C++/TP/TP C++ 1/Travail/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/devops/Bureau/CNAM/C++/TP/TP C++ 1/Travail/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/devops/Bureau/CNAM/C++/TP/TP C++ 1/Travail/cmake-build-debug/CMakeFiles/Travail.dir
