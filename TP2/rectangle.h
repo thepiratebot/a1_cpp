@@ -6,23 +6,29 @@
 #define TP2_RECTANGLE_H
 #include "point.h"
 
-class rectangle {
+class Rectangle {
 private:
     int _longueur, _largeur;
     Point _sup_gauche;
 
 public:
+    /* CONSTRUCTORS */
+    Rectangle(int Longueur, int Largeur);
+    Rectangle(int Longueur, int Largeur, Point Point);
+
     /* GETTER */
-    int get_longueur();
-    int get_largeur();
-    Point get_sup_gauche();
+    int getLongueur() const;
+    int getLargeur() const;
+    Point getSupGauche() const;
+
     /* SETTER */
-    void set_longueur(int Longueur);
-    void set_largeur(int Largeur);
-    void set_sup_gauche(Point Point);
+    void setLongueur(int Longueur);
+    void setLargeur(int Largeur);
+    void setSupGauche(Point Point);
+
     /* METHODS */
-    float get_perimetre();
-    void get_surface();
+    float getPerimetre() const;
+    float getSurface() const;
     void afficher();
 };
 
