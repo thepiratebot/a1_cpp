@@ -107,6 +107,11 @@ std::string Triangle::typeOfTriangle()
 
 void Triangle::afficher()
 {
+    std::cout << "##### TRIANGLE #####" << std::endl;
+
+    std::cout << "*** CONSTRUCTORS ***" << std::endl;
+    std::cout << "Triangle(Point PointOne, Point PointTwo, Point PointThree) - Constructeur" << std::endl;
+
     std::cout << "*** GETTER ***" << std::endl;
     std::cout << "getPointOne() - Retourne une structure de type Point (point n°1) (x;y) : " << getPointOne().x << ";" << getPointOne().y << ")" << std::endl;
     std::cout << "getPointTwo() - Retourne une structure de type Point (point n°2) (x;y) : " << getPointTwo().x << ";" << getPointTwo().y << ")" << std::endl;

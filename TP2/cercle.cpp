@@ -56,6 +56,11 @@ bool Cercle::insideCercle(Point Point)
 
 void Cercle::afficher()
 {
+    std::cout << "##### CERCLE #####" << std::endl;
+
+    std::cout << "*** CONSTRUCTORS ***" << std::endl;
+    std::cout << "Cercle(int diametre, Point centre) - Constructeur" << std::endl;
+
     std::cout << "*** GETTER ***" << std::endl;
     std::cout << "getDiametre() - Retourne le diamètre : " << getDiametre() << std::endl;
     std::cout << "getCentre() - Retourne une structure de type Point (centre du cercle) (x;y) : (" << getCentre().x << ";" << getCentre().y << ")" << std::endl;

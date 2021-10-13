@@ -62,6 +62,12 @@ float Rectangle::getSurface() const
 
 void Rectangle::afficher()
 {
+    std::cout << "##### RECTANGLE #####" << std::endl;
+
+    std::cout << "*** CONSTRUCTORS ***" << std::endl;
+    std::cout << "Rectangle(int Longueur, int Largeur) - Constructeur" << std::endl;
+    std::cout << "Rectangle(int Longueur, int Largeur, Point PointSupGauche) - Constructeur" << std::endl;
+
     std::cout << "*** GETTER ***" << std::endl;
     std::cout << "getLongueur() - Retourne la longueur : " << getLongueur() << std::endl;
     std::cout << "getLargeur() - Retourne la largeur : " << getLargeur() << std::endl;
