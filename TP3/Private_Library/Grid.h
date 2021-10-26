@@ -5,7 +5,6 @@
 #ifndef TP3_GRID_H
 #define TP3_GRID_H
 #include <iostream>
-#include <vector>
 
 class Grid {
 private:

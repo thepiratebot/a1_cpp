@@ -1,5 +1,4 @@
-#include "Grid.h"
-#include "Grid.cpp"
+#include "Private_Library/Grid.cpp"
 
 using namespace std;
 
