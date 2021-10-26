@@ -16,14 +16,6 @@ Grid::Grid(int Height, int Width)
     {
         getArray()[x] = new std::string[Width];
     }
-
-    for (int x = 0; x < Height; x++)
-    {
-        for (int y = 0; y < Width; y++)
-        {
-            getArray()[x][y] = "0";
-        }
-    }
 }
 
     /* GETTER */
@@ -50,11 +42,16 @@ std::string Grid::getValue(int X, int Y)
     /* SETTER */
 void Grid::setValue(int X, int Y, std::string Value)
 {
-    getArray()[X-1][Y-1] = std::move(Value);
+    getArray()[Y-1][X-1] = std::move(Value);
 }
 
 
 /* METHODS */
+bool Grid::isCellEmpty(int X, int Y)
+{
+    return (!getArray()[Y - 1][X - 1].empty());
+}
+
 void Grid::showGrid()
 {
     for (int x = 0; x < getHeight(); x++)

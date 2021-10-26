@@ -28,6 +28,7 @@ public:
     /* METHODS */
     //bool checkRow(int RecursiveLength, bool Continue); *Futur fonction*
     //bool checkColumn(int RecursiveLength, bool Continue); *Futur fonction*
+    bool isCellEmpty(int X, int Y);
     void showGrid();
 };
 
