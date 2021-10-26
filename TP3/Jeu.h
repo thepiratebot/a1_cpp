@@ -4,10 +4,16 @@
 
 #ifndef TP3_JEU_H
 #define TP3_JEU_H
-
+#include "GrilleMorpion.h"
+#include "Private_Library/Grid.h"
 
 class Jeu {
+public:
+    /* CONSTRUCTORS */
+    Jeu();
 
+    /* METHODS */
+    void newMorpionGame();
 };
 
 

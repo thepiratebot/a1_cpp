@@ -12,19 +12,19 @@ GrilleMorpion::GrilleMorpion(int Height, int Width) : Grid(Height, Width) {}
 bool GrilleMorpion::checkHeight(int Height, std::string Token)
 {
     for (int i = 0; i < getWidth(); i++)
-        if (getArray()[i][Height].empty())
+        if (getArray()[i][Height - 1].empty())
             return false;
 
-    return (getArray()[0][Height] == getArray()[1][Height] && getArray()[0][Height] == getArray()[2][Height] && getArray()[0][Height] == Token);
+    return (getArray()[0][Height - 1] == getArray()[1][Height - 1] && getArray()[0][Height - 1] == getArray()[2][Height - 1] && getArray()[0][Height - 1] == Token);
 }
 
 bool GrilleMorpion::checkWidth(int Width, std::string Token)
 {
     for (int i = 0; i < getHeight(); i++)
-        if (getArray()[Width][i].empty())
+        if (getArray()[Width - 1][i].empty())
             return false;
 
-    return (getArray()[Width][0] == getArray()[Width][1] && getArray()[Width][0] == getArray()[Width][2] && getArray()[Width][0] == Token);
+    return (getArray()[Width][0] == getArray()[Width - 1][1] && getArray()[Width - 1][0] == getArray()[Width - 1][2] && getArray()[Width - 1][0] == Token);
 }
 
 bool GrilleMorpion::checkDiagonal(const std::string& Token)

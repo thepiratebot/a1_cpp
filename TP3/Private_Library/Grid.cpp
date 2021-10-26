@@ -49,7 +49,18 @@ void Grid::setValue(int X, int Y, std::string Value)
 /* METHODS */
 bool Grid::isCellEmpty(int X, int Y)
 {
-    return (!getArray()[Y - 1][X - 1].empty());
+    return (getArray()[Y - 1][X - 1].empty());
+}
+
+void Grid::clearGrid()
+{
+    for (int x = 0; x < getHeight(); x++)
+    {
+        for (int y = 0; y < getWidth(); y++)
+        {
+            getArray()[x][y] = "";
+        }
+    }
 }
 
 void Grid::showGrid()
