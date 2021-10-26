@@ -9,7 +9,7 @@
 GrilleMorpion::GrilleMorpion(int Height, int Width) : Grid(Height, Width) {}
 
     /* METHODS */
-bool GrilleMorpion::checkHeight(int Height, std::string Token)
+bool GrilleMorpion::checkHeight(int Height, const std::string& Token)
 {
     for (int i = 0; i < getWidth(); i++)
         if (getArray()[i][Height - 1].empty())
@@ -18,7 +18,7 @@ bool GrilleMorpion::checkHeight(int Height, std::string Token)
     return (getArray()[0][Height - 1] == getArray()[1][Height - 1] && getArray()[0][Height - 1] == getArray()[2][Height - 1] && getArray()[0][Height - 1] == Token);
 }
 
-bool GrilleMorpion::checkWidth(int Width, std::string Token)
+bool GrilleMorpion::checkWidth(int Width, const std::string& Token)
 {
     for (int i = 0; i < getHeight(); i++)
         if (getArray()[Width - 1][i].empty())

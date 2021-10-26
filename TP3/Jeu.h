@@ -14,6 +14,7 @@ public:
 
     /* METHODS */
     void newMorpionGame();
+    void newP4Game();
 };
 
 
