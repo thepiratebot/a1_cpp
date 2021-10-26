@@ -36,13 +36,13 @@ std::string** Grid::getArray()
 
 std::string Grid::getValue(int X, int Y)
 {
-    return getArray()[X-1][Y-1];
+    return getArray()[Y - 1][X - 1];
 }
 
     /* SETTER */
 void Grid::setValue(int X, int Y, std::string Value)
 {
-    getArray()[Y-1][X-1] = std::move(Value);
+    getArray()[Y - 1][X - 1] = std::move(Value);
 }
 
 
@@ -63,3 +63,92 @@ void Grid::showGrid()
         std::cout << " | " << std::endl;
     }
 }
+
+/*
+bool GrilleMorpion::checkDiagonal()
+{
+    bool check = false;
+
+    int x = 0;
+    int y = 0;
+
+    if (getArray()[y][x].empty())
+    {
+        check = false;
+    } else
+    {
+        while (x < getHeight() - 1)
+        {
+            if (x < getHeight() - 1)
+            {
+                if (getArray()[0][2] == getArray()[y + 1][x + 1]) {
+                    x++;
+                    y++;
+                    check = true;
+                } else
+                {
+                    check = false;
+                }
+            }
+        }
+    }
+
+    x = 0;
+    y = getHeight() - 1;
+
+    if (getArray()[y][x].empty())
+    {
+        return false;
+    } else
+    {
+        while (x < getHeight() - 1)
+        {
+            if (x < getHeight() - 1)
+            {
+                if (getArray()[2][0] == getArray()[y - 1][x + 1]) {
+                    x++;
+                    y--;
+                    check = true;
+                } else
+                {
+                    return false;
+                }
+            }
+        }
+    }
+
+    return check;
+} */
+
+/* bool GrilleMorpion::checkHeight()
+{
+bool check = false;
+
+int x = 0;
+int y = 0;
+
+while (x < getWidth())
+{
+    if (getArray()[y][x].empty())
+    {
+        x++;
+        y = 0;
+    } else if (y < getHeight() - 1)
+    {
+        if (getArray()[0][x] == getArray()[y + 1][x]) {
+            y++;
+            check = true;
+        } else
+        {
+            x++;
+            y=0;
+            check = false;
+        }
+    } else if (check)
+    {
+        return check;
+    }
+}
+
+return check;
+} */

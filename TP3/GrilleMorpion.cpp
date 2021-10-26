@@ -9,73 +9,46 @@
 GrilleMorpion::GrilleMorpion(int Height, int Width) : Grid(Height, Width) {}
 
     /* METHODS */
-bool GrilleMorpion::checkHeight()
+bool GrilleMorpion::checkHeight(int Height, std::string Token)
+{
+    for (int i = 0; i < getWidth(); i++)
+        if (getArray()[i][Height].empty())
+            return false;
+
+    return (getArray()[0][Height] == getArray()[1][Height] && getArray()[0][Height] == getArray()[2][Height] && getArray()[0][Height] == Token);
+}
+
+bool GrilleMorpion::checkWidth(int Width, std::string Token)
+{
+    for (int i = 0; i < getHeight(); i++)
+        if (getArray()[Width][i].empty())
+            return false;
+
+    return (getArray()[Width][0] == getArray()[Width][1] && getArray()[Width][0] == getArray()[Width][2] && getArray()[Width][0] == Token);
+}
+
+bool GrilleMorpion::checkDiagonal(const std::string& Token)
 {
     bool check = false;
 
-    int x = 0;
-    int y = 0;
+    for (int i = 0; i < getHeight(); i++)
+        if (getArray()[i][i].empty())
+            check = true;
 
-    while (x < getWidth())
+    if (!check && getArray()[0][0] == getArray()[1][1] && getArray()[0][0] == getArray()[2][2] && getArray()[0][0] == Token)
+        return true;
+
+    if (!check && !getArray()[2][0].empty() && !getArray()[1][1].empty() && !getArray()[0][2].empty())
     {
-        if (getArray()[y][x].empty())
-        {
-            x++;
-            y = 0;
-        } else if (y < getHeight() - 1)
-        {
-            if (getArray()[0][x] == getArray()[y + 1][x]) {
-                y++;
-                check = true;
-            } else
-            {
-                x++;
-                y=0;
-                check = false;
-            }
-        } else if (check)
-        {
-            return check;
-        }
+        if (getArray()[2][0] == getArray()[1][1] && getArray()[2][0] == getArray()[0][2] && getArray()[2][0] == Token)
+            return true;
+    } else
+    {
+        return false;
     }
-
-    return check;
 }
 
-bool GrilleMorpion::checkWidth()
+bool GrilleMorpion::playerVictory(int Height, int Width, const std::string &Token)
 {
-    bool check = false;
-
-    int x = 0;
-    int y = 0;
-
-    while (x < getHeight())
-    {
-        if (getArray()[x][y].empty())
-        {
-            x++;
-            y = 0;
-        } else if (y < getWidth() - 1)
-        {
-            if (getArray()[x][0] == getArray()[x][y + 1]) {
-                y++;
-                check = true;
-            } else
-            {
-                x++;
-                y=0;
-                check = false;
-            }
-        } else if (check)
-        {
-            return check;
-        }
-    }
-
-    return check;
-}
-
-bool GrilleMorpion::checkDiagonal()
-{
-
+    return (checkDiagonal(Token) || checkWidth(Width,Token) || checkHeight(Height, Token));
 }
