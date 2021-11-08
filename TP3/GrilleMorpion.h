@@ -12,8 +12,8 @@ public:
     GrilleMorpion(int Height, int Width);
 
     /* METHODS */
-    bool checkHeight(int Height, const std::string& Token);
-    bool checkWidth(int Width, const std::string& Token);
+    bool checkHeight(int Height, std::string Token);
+    bool checkWidth(int Width, std::string Token);
     bool checkDiagonal(const std::string& Token);
 
     bool playerVictory(int Height, int Width, const std::string& Token);

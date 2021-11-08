@@ -11,7 +11,7 @@ int main()
     Jeu Game;
     int choose;
 
-    std::cout << "A quel jeu souhaitez-vous jouer ?" << std::endl << "1 Morpion" << std::endl << "2 Puissance 4";
+    std::cout << "A quel jeu souhaitez-vous jouer ?" << std::endl << "[1] Morpion" << std::endl << "[2] Puissance 4" << std::endl;
     std::cin >> choose;
 
     if (choose == 1)
